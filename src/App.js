@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
@@ -7,20 +7,53 @@ class App extends Component {
     super();
 
     this.state = {
-      string: "Hello Taahaa"
+      pokemon: [
+        {
+          name: "Bulbasaur",
+          id: "pk1"
+        },
+        {
+          name: "Ivysaur",
+          id: "pk2"
+        },
+        {
+          name: "Venusaur",
+          id: "pk3"
+        },
+        {
+          name: "Squirtle",
+          id: "pk4"
+        },
+        {
+          name: "Wartortle",
+          id: "pk5"
+        },
+        {
+          name: "Blastoise",
+          id: "pk6"
+        },
+        {
+          name: "Charmander",
+          id: "pk7"
+        },
+        {
+          name: "Charmeleon",
+          id: "pk8"
+        },
+        {
+          name: "Charizard",
+          id: "pk9"
+        }
+      ]
     };
   }
   
   render() {
     return(
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>{this.state.string}</p>
-          <button onClick={()=> this.setState({string:"Goodbye Taahaa"})}>
-            Change Text
-          </button>
-        </header>
+        {
+          this.state.pokemon.map(pokemon => <h1 key={pokemon.id}>{pokemon.name }</h1>)
+        }
       </div> 
     )
   }
