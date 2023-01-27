@@ -9,7 +9,9 @@ export const Card = (props) => (
         height = "180"/>
         <h2> {props.pokemon.name} </h2>
         <img alt=""
-        src={props.pokemon.type1}/>
+        src={props.pokemon.type1}
+        width = ""
+        height = ""/>
         <img alt=""
         src={props.pokemon.type2}/>
     </div>
