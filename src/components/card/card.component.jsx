@@ -14,11 +14,5 @@ export const Card = (props) => (
         height = ""/>
         <img alt=""
         src={props.pokemon.type2}/>
-        {/* <img alt=""
-        src={props.pokemon.type1}
-        width = ""
-        height = ""/>
-        <img alt=""
-        src={props.pokemon.type2}/> */}
     </div>
 )
