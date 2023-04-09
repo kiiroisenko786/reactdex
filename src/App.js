@@ -19,13 +19,17 @@ class App extends Component {
   }
   
   render() {
+    const { pokemon, searchField } = this.state;
+    const filteredmons = pokemon.filter(pokemon => 
+      pokemon.name.toLowerCase().includes(searchField.toLowerCase())
+    );
     return(
       <div className="App">
         <input
           type="search" placeholder='Search Kanto Dex'
           onChange={e =>
             this.setState({ searchField: e.target.value })}/>
-        <CardList pokemon = {this.state.pokemon} />
+        <CardList pokemon = {filteredmons} />
       </div> 
     )
   }
